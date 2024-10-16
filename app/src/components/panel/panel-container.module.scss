@@ -1,0 +1,57 @@
+.panelsWrapper {
+  display: flex;
+  margin: 0 10px;
+  height: calc(100vh - 10px);
+  :global {
+    .main-content {
+      flex: 1;
+      position: relative;
+    }
+
+    .gap {
+      width: 10px;
+      cursor: col-resize;
+      user-select: none;
+    }
+
+    .panels {
+      min-width: 100px;
+      position: relative;
+      .close-action {
+        position: absolute;
+        top: 10px;
+        right: 4px;
+      }
+    }
+
+    .box { 
+      background-color: var(--backgroundColor);
+      border: solid 1px var(--borderColor);
+      overflow: hidden;
+      border-radius: 12px;
+    } 
+    .ant-tabs {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      .ant-tabs-nav {
+        padding: 0 10px;
+        user-select: none;
+        margin-bottom: 0px;
+        .ant-tabs-tab {
+          font-size: 14px !important;
+        }
+      }
+      .ant-tabs-content-holder {
+        flex:1;
+        .ant-tabs-content, .ant-tabs-tabpane{
+          height: 100%;
+        }
+      }
+
+      .ant-tabs-tab+.ant-tabs-tab {
+        margin: 0 0 0 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.widgetTree {
+    height: 340px;
+    :global {
+        .widget-category-panel {
+            display: flex;
+            font-size: 12px;
+            height: 308px;
+            .category {
+                height: 100%;
+                width: 160px;
+                padding-right: 10px;
+                border-right: solid 1px var(--popupBorderColor);
+                overflow-y: auto;
+                overflow-x: hidden;
+                &-item {
+                    padding: 2px 8px;
+                    border-radius: 4px;
+                    margin-bottom: 6px;
+                    cursor: pointer;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    transition: var(--transition);
+                    &:hover {
+                        background-color: var(--actionHoverColor);
+                    }
+                    &.active {
+                        background-color: var(--primaryColor);
+                        color: white;
+                    }
+                }
+            }
+            .widget-list {
+                padding: 0 10px;
+                margin-right: -10px;
+                flex: 1;
+                height: 100%;
+                overflow-y: auto;
+                overflow-x: hidden;
+                .widget-category-section {
+                    padding: 10px 0;
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                    &-title {
+                        font-size: 10px;
+                        opacity: .2;
+                        margin-bottom: 10px;
+                        padding-left: 6px;
+                    }
+                    border-bottom: solid 1px var(--popupBorderColor);
+                    &:last-child {
+                        border-bottom: transparent;
+                    }
+                }
+            }
+
+            &.no-category {
+                .widget-list {
+                    padding-left: 0;
+                    .widget-category-section-title {
+                        padding-left: 6px;
+                    }
+                }
+            }
+        }
+
+        .dndnode {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            cursor: grab;
+        }
+
+        .widget-node {
+            padding: 4px 6px;
+            transition: var(--transition);
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .widget-title{
+                font-size: 12px;
+                flex-direction: column;
+                align-items: baseline;
+            }
+            .display_name {
+                text-align: left;
+                text-overflow: ellipsis;
+                text-wrap: nowrap;
+                overflow: hidden;
+            }
+            .class_name {
+                font-size: 10px;
+                display: inline-block;
+                opacity: .2;
+                text-overflow: ellipsis;
+                text-wrap: nowrap;
+            }
+            .pin-button {
+                width: 20px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                color: white;
+                margin-left: auto;
+                display: flex;
+            }
+        }
+
+        .search-result {
+            height: 308px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    }
+}
+
+.widgetTreeOnPanel {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    height: 360px;
+    :global {
+        .ant-popover-inner {            
+            padding: 10px;
+        }
+    }
+}

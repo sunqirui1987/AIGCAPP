@@ -1,0 +1,360 @@
+.action {
+    border-radius: 4px;
+    user-select: none;
+    padding: 2px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+        // background-color: var(--backgroundColorL2);
+        background-color: var(--actionHoverColor);
+    }
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.ant-tooltip {
+    .ant-tooltip-inner, .ant-tooltip-arrow:before {
+       background-color: #23242C;
+        font-size: 12px;
+    }
+}
+
+
+.ant-badge-count {
+    transform: scale(0.8) translate(9px, -9px) !important;
+}
+
+::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    &:hover,
+    &:focus,
+    &:active {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+    &:hover::-webkit-scrollbar-track,
+    &:focus::-webkit-scrollbar-track,
+    &:active::-webkit-scrollbar-track {
+        background: var(--sb-track-color);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+    &:hover::-webkit-scrollbar-thumb,
+    &:focus::-webkit-scrollbar-thumb,
+    &:active::-webkit-scrollbar-thumb {
+        background: var(--sb-thumb-color);
+        border-radius: 10px;
+    }
+}
+
+.spliter {
+    width: 2px;
+    border-radius: 2px;
+    background-color: #D9D9D9;
+    opacity: 0.2;
+    margin: 0 6px;
+    height: 20px;
+}
+
+.icon-button {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    svg {
+        margin-right: 10px;
+    }
+    &.ant-btn-primary {
+        path {
+            fill: white;
+        }
+    } 
+}
+
+.action-button {
+    padding: 2px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    &:hover {
+        background-color: var(--backgroundColorL2);
+    }
+    svg {
+        * {
+            fill: white;
+            opacity: 1;
+        }
+    }
+}
+
+.ant-menu-submenu .ant-menu.ant-menu.ant-menu.ant-menu.ant-menu.ant-menu {
+    background-color: var(--backgroundColorL1_5);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid #2c2c33;
+
+    .ant-menu-item-group-title {
+        font-size: 11px;
+        user-select: none;
+    }
+    .ant-menu-item,
+    .ant-menu-submenu .ant-menu-submenu-title {
+        padding: 0 10px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+    }
+
+    .ant-menu-submenu .ant-menu-submenu-arrow {
+        inset-inline-end: 6px;
+    }
+}
+
+.ant-tabs.ant-tabs.ant-tabs.ant-tabs-top>.ant-tabs-nav::before {
+    border-color: var(--borderColor);
+}
+
+.ant-btn.ant-btn-default {
+    box-shadow: none;
+    font-size: 14px;
+    background-color:  transparent; //var(--backgroundColor);
+    border-color: var(--actionBorderColor);
+    &:hover {
+        svg * {
+            fill: var(--primaryColor)
+        }
+    }
+}
+
+.ant-btn.ant-btn-dangerous {
+    border-color: #dc4446;
+    svg * {
+        fill: #dc4446;
+    }
+    &:hover {
+        svg * {
+            fill:#e86e6b;
+        }
+    }
+}
+
+.ant-btn {
+    display: inline-flex;
+    align-items: center;  
+    padding: 3px 8px;  
+    svg {
+        margin-right: 4px;
+    }
+    svg * {
+        transition: var(--transition);
+    }
+}
+
+.ant-input {
+    font-size: 14px;
+    background-color: #161619;
+    border-radius: var(--borderRadius);
+    border: 1px solid #2F3144;
+    color: white;
+    &:hover {
+        border-color: var(--primaryColor);
+    }
+    &:focus {
+        border-color: var(--primaryColor);
+        box-shadow: none;
+    }
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    &.center {
+        justify-content: center;
+    }
+    &.vertical {
+        flex-direction: column;
+    }
+}
+
+.ant-popover {
+    --antd-arrow-background-color: #23242C;
+    .ant-popover-inner {
+        background-color: #23242C;
+        border-radius: var(--borderRadius);
+        box-shadow: var(--box-shadow);
+        // border: 1px solid #2c2c33;
+    }
+}
+
+.ant-modal-confirm-confirm .ant-modal-content {
+    color: white;
+    background-color: var(--backgroundColorL1_5);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid #2c2c33;
+    .ant-modal-confirm-body-wrapper {
+        .ant-modal-confirm-body {
+            .ant-modal-confirm-title {
+                color: white;
+            }
+            .ant-modal-confirm-content {
+                color: white;
+            }
+        }
+    }
+}
+
+.ant-modal-root {
+    z-index: 20;
+    position: absolute;
+}
+
+.ant-image-preview-root {
+    position: absolute;
+    z-index: 100;
+}
+.ant-image-preview-operations-wrapper {
+    position: absolute;
+    z-index: 101 !important;
+    .ant-image-preview-operations {
+        background-color: var(--backgroundColorL1) !important;
+    }
+    .ant-image-preview-close, .ant-image-preview-switch-right, .ant-image-preview-switch-left {
+        background-color: var(--backgroundColorL1);
+        &:hover {
+            background-color: var(--actionHoverColor);
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+
+    >div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            margin-right: 4px;
+        }
+    }
+}
+
+
+.ant-image {
+    img.ant-image-img {
+        /* Same as first example */
+        min-height: 50px;
+        &:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            height: calc(100%);
+            width: 100%;
+            background-color: var(--backgroundColor);
+            border-radius: 4px;
+        }
+
+        &:after {
+            content: "\f127" " Broken image ";
+            display: block;
+            font-size: 11px;
+            font-style: normal;
+            font-family: FontAwesome;
+            color: rgb(100, 100, 100);
+            position: absolute;
+            top: 16px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+}
+
+.search-box {
+    margin-bottom: 10px;
+    svg {
+        width: 14px;
+        position: relative;
+        top: 3px;
+        left: -3px;
+        * {
+            stroke: white;  
+        }
+    }
+    .ant-input-affix-wrapper {
+        height: 28px;
+        border-color: transparent;
+        background-color: #19191D;
+        &-focused {
+            border-color: var(--primaryColor);
+        }
+        input {
+            font-size: 14px;
+            background-color: #19191D;
+            line-height: 20px;
+        }
+    }
+}
+
+.ant-segmented {
+    background-color: #121216;
+    .ant-segmented-item-label {
+        font-size: 14px;
+    }
+    .ant-segmented-item {
+        margin: 0 2px;
+    }
+    .ant-segmented-item-selected {
+        background-color: var(--backgroundColorL1) !important;
+    }
+    .ant-segmented-item:hover:not(.ant-segmented-item-selected):not(.ant-segmented-item-disabled)::after {
+        background-color: #45455559 !important;
+    }
+}
+
+
+.ant-select.ant-select.ant-select {
+    font-family: JetBrains Mono, monospace;
+    font-size: 12px;
+    .ant-select-selector {
+        border-color: #414356;
+        background-color: #161619;
+    }
+}

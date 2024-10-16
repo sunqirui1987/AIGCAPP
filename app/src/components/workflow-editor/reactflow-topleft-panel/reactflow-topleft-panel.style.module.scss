@@ -1,0 +1,44 @@
+.topLeftPanel {
+    position: relative;
+    border-radius: 12px;
+    padding: 6px;
+    background-color: var(--backgroundColorL1);
+    :global {
+        .action-file-dropdown {
+            .icon {
+                transition: var(--transition);
+                transform: scale(.8);
+            }
+            &:hover {
+                .icon {
+                    transform: translateY(3px) scale(.8);
+                }
+            }
+        }
+        .action-refresh {
+            margin-left: 5px;
+            svg {
+                position: relative;
+                top: 1.5px;
+            }
+        }
+        .action-file-name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: keep-all;
+            white-space: nowrap; 
+            max-width: 200px;
+            justify-content: flex-start;
+        }
+        .icon {
+            svg {
+                * {
+                    fill: white;
+                }
+            }
+        }
+        .action:hover {
+            background-color: var(--backgroundColorL2);
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.myWorkflows {
+    padding-top: 14px;
+    :global {
+        .workflow-create-box {
+            margin-bottom: 20px;
+            margin-right: 16px;
+            position: relative;
+            .actions {
+                position: absolute;
+                top: 4px;
+                right: 0px;
+            }
+        }
+        
+        .create-button {
+            user-select: none;
+            display: flex;
+            border-radius: 10px;
+            border: 1px solid rgba(71, 71, 71, 0.10);
+            background: var(--cardBackground);
+            padding: 12px;
+            transition: var(--transition);
+            .icon {
+                margin-right: 6px;
+            }
+            .description {
+                font-size: 12px;
+                opacity: .5;
+            }
+            &:hover {
+                background-color: var(--cardHover);
+            }
+        }
+
+        .workflow-list {
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+            padding: 10px 10px 10px 0;
+        }
+
+        .workflow-list-item {
+            user-select: none;
+            border-radius: 12px;
+            border: 1px solid rgba(71, 71, 71, 0.10);
+            background: var(--cardBackground);
+            padding: 10px;
+            transition: var(--transition);
+            .gallery-card {
+                height: 158px;
+                background-color: var(--cardHover);
+                border-radius: 10px;
+            }
+
+            .title {
+                margin: 10px 0 6px;
+                font-size: 16px;
+                font-weight: 700;
+                max-width: 200px;
+                overflow: hidden;
+                text-wrap: nowrap;
+                text-overflow: ellipsis;
+                flex: 1;
+            }
+            .action {
+                height: 20px;
+                &:hover {
+                    background-color: var(--backgroundColorL3);
+                }
+            }
+            &:hover {
+                background-color: var(--cardHover);
+            }
+        }
+    }   
+}
+
+.popoverActions {
+    :global {
+        .action {
+            svg * {
+                fill: white;
+            }
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.12);
+            }
+        }
+    }
+}

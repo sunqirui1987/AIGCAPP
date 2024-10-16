@@ -1,0 +1,12 @@
+.topRightPanel {
+    position: relative;
+    border-radius: 12px;
+    padding: 6px;
+    background-color: var(--backgroundColorL1);
+    height: 40px;
+    :global {
+        .action:hover {
+            background-color: var(--backgroundColorL2);
+        }
+    }
+}
